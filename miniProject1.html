@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Budget Decision Helper</title>
+  <link rel="stylesheet" href="Css Of Miniproject.css" />
+  <script src="js of miniProject1.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Shopping Budget Helper</h1>
+    <p>Check if you can afford these items!</p>
+  </header>
+
+  <main>
+    <section class="items-grid" aria-label="Items for sale">
+      <figure class="item-card" data-price="4500" data-name="Golden Shoes">
+        <img src="goldShoes.jpg" alt="Luxury golden dress shoes" class="item-image" />
+        <figcaption>
+          Golden Luxury Shoes<br>
+          <strong>4,500 Birr</strong>
+        </figcaption>
+        <button class="check-btn"  onclick="myGoldenShoes()">Check Budget</button>
+      </figure>
+
+      <figure class="item-card" data-price="990" data-name="Gaming Headphones">
+        <img src="headphone.jpg" alt="Stylish gaming headphones" class="item-image" />
+        <figcaption>
+          Premium Gaming Headphones<br>
+          <strong>990 Birr</strong>
+        </figcaption>
+        <button class="check-btn" onclick="myHeadphone()">Check Budget</button>
+      </figure>
+
+      <figure class="item-card" data-price="400" data-name="Smartwatch">
+        <img src="smartwatch.jpg" alt="Modern smartwatch" class="item-image" />
+        <figcaption>
+          Stylish Smartwatch<br>
+          <strong>400 Birr</strong>
+        </figcaption>
+        <button class="check-btn"  onclick="mySmartWatch()">Check Budget</button>
+      </figure>
+
+      <figure class="item-card" data-price="459" data-name="Soccer Ball">
+        <img src="football.png" alt="Colorful soccer ball with flags" class="item-image" />
+        <figcaption>
+          World Flags Soccer Ball<br>
+          <strong>459 Birr</strong>
+        </figcaption>
+        <button class="check-btn" onclick="myFootBall()">Check Budget</button>
+      </figure>
+    </section>
+
+    <section class="result-area">
+      <h2>Your Decision</h2>
+      <p id="decision" aria-live="polite">Click any "Check Budget" button to start.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #a61414 33%,
+    #008000 33%,
+    #80004b 66%,
+    #ff8c00 66%,
+    #214bbf
+  );
+  color: #111;
+  line-height: 1.5;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.15);
+  color: white;
+  text-shadow: 1px 1px 3px #000;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  color: #ff9800;
+  font-size: 2.5rem;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.8rem;
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.item-card {
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+  padding: 1rem;
+}
+
+.item-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+
+.item-image {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  border-radius: 50%;
+  margin: 1rem auto;
+  display: block;
+  animation: pulse 2.2s infinite ease-in-out;
+}
+
+.football {
+  border-radius: 20%; /* less extreme for ball */
+  animation: gentle-spin 12s linear infinite;
+}
+
+.item-card figcaption {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.item-card strong {
+  color: #d81b60;
+  font-size: 1.25rem;
+}
+
+.check-btn {
+  background: #9c27b0;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.6rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.check-btn:hover {
+  background: #7b1fa2;
+  transform: scale(1.06);
+}
+
+.check-btn:active {
+  transform: scale(0.97);
+}
+
+.result-area {
+  text-align: center;
+  margin: 3rem 1rem;
+  padding: 2rem;
+  background: rgba(255,255,255,0.8);
+  border-radius: 12px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#decision {
+  font-size: 1.4rem;
+  font-weight: bold;
+  min-height: 3rem;
+  color: #333;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.14); }
+}
+
+@keyframes gentle-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+  h1 { font-size: 2rem; }
+  .items-grid { gap: 1.2rem; }
+}
